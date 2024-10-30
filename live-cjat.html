@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Live Chat Widget</title>
+  <link rel="stylesheet" href="/app/main/themes/neptune/theme/css/css/live-chat.css">
+</head>
+<body>
+  <div class="chat-widget">
+    <div class="chat-bubble" onclick="toggleChat()">
+      <span>💬</span> <!-- Chat icon -->
+    </div>
+    <div class="chat-window" id="chatWindow">
+      <div class="chat-header">
+        <h2 style="color: aliceblue;">Live Chat</h2>
+        <span class="close" onclick="toggleChat()">✖</span>
+      </div>
+      <div class="chat-body">
+        <input type="text" id="chat-username" placeholder="Enter your name" />
+        <button id="start-chat-button" onclick="startChat()">Start Chat</button>
+        
+        <!-- Message area -->
+        <div id="chat-messages" class="chat-messages"></div>
+        
+        <!-- Message input -->
+        <input type="text" id="chat-message" placeholder="Type a message" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="theme/js/widget.js"></script>
+</body>
+</html>
